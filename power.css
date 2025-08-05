@@ -1,0 +1,681 @@
+ body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+    .hero {
+      background-color: rgba(255, 255, 255, 0.85);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+	  position: relative; /* Make sure this is present */
+	  overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+	.card {
+  margin: 20px;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3,
+ {
+  color: #222;
+  font-weight: 600;
+  padding: 10px 15px 0;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+.card p {
+  font-size: 1.1rem;        /* Larger price */
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #444;              /* Soft black tone */
+  padding: 0 15px 10px;
+}
+.card h3:hover {
+  color: #d505ff;
+  transition: 0.3s ease-in-out;
+}
+
+.card .btn {
+  margin: 15px;
+}
+    .donation-tracker {
+      width: 50%;
+      height: 20px;
+      background-color: #ccc;
+      border-radius: 10px;
+      margin: 20px auto;
+    }
+    .donation-tracker-filled {
+      height: 20px;
+      background-color: #4CAF50;
+      border-radius: 10px;
+      width: 0%;
+    }
+    .customer-story {
+      margin: 30px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      background-color: #fff;
+    }
+    .customer-story:hover, .card:hover {
+      transform: translateY(-5px);
+    }
+    .animate {
+      animation: fadeIn 2s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .product-image {
+      width: 100%;
+      height: 280px;
+	  object-fit: cover;
+      border-radius: 12px 12px 0 0;
+      display: block;
+    }
+	.footer-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Platform-specific colors */
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-instagram {
+  color: #e4405f;
+}
+
+.fa-x-twitter, .fa-twitter {
+  color: #1DA1F2;
+}
+.nav-link.active {
+  font-weight: bold;
+  color: #ffc107 !important; /* Bootstrap warning color */
+}
+
+.bg-1 {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.bg-2 {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+.bg-3 {
+  background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+}
+
+.bg-4 {
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+}
+
+.bg-5 {
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+}
+
+.bg-6 {
+  background: linear-gradient(135deg, #fccb90, #d57eeb);
+}
+.navbar {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+.btn-primary {
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background-color: #ff4081;
+  border-color: #ff4081;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+  .product-image {
+    height: 200px;
+  }
+  .hero {
+    padding: 40px 20px;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 64, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 64, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 64, 129, 0);
+  }
+}
+#productList .col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+.rating-stars i {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+.gradient-pill {
+    background: linear-gradient(135deg, #ff8c42, #ff3c6f);
+    padding: 6px 14px;
+    border-radius: 30px;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .customer-story {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #1c1c1c; 
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.customer-story:hover {
+  transform: translateY(-8px);
+}
+
+.customer-story img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.customer-story h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #222;
+}
+
+.customer-story p {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.customer-story::before {
+  content: "“";
+  font-size: 80px;
+  color: black;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  z-index: 0;
+}
+.product-desc {
+  font-size: 0.95rem;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  margin: 5px 15px;
+  line-height: 1.4;
+}
+#how-it-works i:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.15));
+}
+/* Our Mission Section Styling */
+.mission-section {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.mission-section h2 {
+  font-size: 2.8rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.mission-section p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+.icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 6px 28px 0 rgba(0,0,0,0.15), 0 0 0 5px rgba(255,255,255,0.08) inset;
+  transition: transform 0.3s;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1);
+}
+/* "You Shop" icon gets blue gradient */
+.icon-wrapper.icon-shop {
+  background: radial-gradient(circle at 30% 30%, #56ccf2 70%, #2f80ed 100%);
+}
+.icon-shop { border-top: 4px solid #2f80ed; }
+.icon-donate { border-top: 4px solid #f857a6; }
+.icon-impact { border-top: 4px solid #fac858; }
+
+/* "We Donate" icon gets pink-red gradient */
+.icon-wrapper.icon-donate {
+  background: radial-gradient(circle at 60% 40%, #ff5858 70%, #f857a6 100%);
+}
+
+/* "Impact Lives" icon gets orange-yellow gradient */
+.icon-wrapper.icon-impact {
+  background: radial-gradient(circle at 50% 60%, #fddb92 70%, #d1fdff 100%);
+}
+
+/* Make the icon itself white and add text-shadow to give "glow" */
+.icon-wrapper i {
+  color: #fff !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.12), 0 0 8px #fff8;
+}
+/* Beautiful gradient and subtle overlay */
+.how-it-works-section {
+  position: relative;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-radius: 30px;
+  box-shadow: 0 8px 40px rgba(75,0,130,0.13), 0 1.5px 6px #ffe8d6;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+/* Add a decorative SVG WAVE at the top and bottom */
+.how-it-works-section .wave-top {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 60px;
+  z-index: 1;
+}
+
+.how-it-works-section .wave-bottom {
+  position: absolute;
+  bottom: 0; left: 0; width: 100%; height: 60px;
+  z-index: 1;
+}
+
+.how-it-works-section > *:not(.wave-top):not(.wave-bottom) {
+  position: relative;
+  z-index: 2;
+}
+.p-4.rounded.shadow {
+  background: linear-gradient(135deg, #fbc2eb 20%, #a6c1ee 100%);
+  box-shadow: 0 8px 32px 0 rgba(72, 64, 247, 0.23), 0 2px 10px rgba(0,0,0,0.07);
+  border-radius: 28px;
+  transition: transform 0.3s cubic-bezier(.19,1,.22,1), box-shadow 0.3s;
+  border: none;
+}
+.p-4.rounded.shadow:hover {
+  transform: scale(1.035) translateY(-6px) rotate(-1deg);
+  box-shadow: 0 12px 38px 0 rgba(72, 64, 247, 0.18), 0 4px 14px rgba(0,0,0,0.13);
+}
+.svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%; /* Ensure it covers the hero section height */
+  overflow: hidden; /* Prevents scrollbars from wave movement */
+}
+
+.svg-background svg {
+  width: 100%;
+  height: 100%; /* Make the SVG fill its container */
+  display: block;
+  /* Apply animation to the SVG itself */
+  animation: waveMovement 20s linear infinite alternate; /* Slower, smoother wave */
+}
+
+/* Keyframes for the wave animation */
+@keyframes waveMovement {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-5%) translateY(5px); /* Subtle horizontal and vertical shift */
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+/* Style for the impact area cards */
+#impact-areas .card {
+    background: #fff; /* White background for the card */
+    color: #333; /* Default text color for the card */
+    border-radius: 20px; /* More rounded corners */
+    transition: all 0.4s ease-in-out; /* Smoother transition */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle default shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content to top/bottom */
+}
+
+#impact-areas .card:hover {
+    transform: translateY(-12px) rotate(1deg); /* Lift and slight rotation on hover */
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25), 0 0 0 4px rgba(255, 255, 255, 0.3) inset;
+}
+
+#impact-areas .card-body {
+    padding: 30px; /* More padding inside the card */
+}
+
+#impact-areas .card-title {
+    font-size: 1.7rem; /* Slightly larger heading */
+    color: #222; /* Darker title color */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#impact-areas .card-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* === ICON SPECIFIC STYLING === */
+.impact-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Larger circle for icon */
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 25px; /* More space below icon */
+    position: relative;
+    overflow: hidden; /* Hide overflow for gradient background */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2), 0 0 0 5px rgba(255,255,255,0.3); /* Outer shadow + inner ring */
+    transition: all 0.3s ease;
+}
+
+#impact-areas i.fas { /* Target only Duotone icons with this rule */
+    font-size: 3.5rem; /* Make the icon larger within its circle */
+    position: relative;
+    z-index: 2; /* Ensure icon is above background pseudo-element */
+    /* Font Awesome Duotone specific colors */
+    --fa-primary-color: #fff; /* Primary color of icon (front layer) is white */
+    --fa-secondary-color: #fff; /* Secondary color (back layer) is also white initially */
+    opacity: 0.9; /* Slightly transparent */
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Healthcare Icon */
+.impact-icon-health {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Blue gradient background */
+}
+
+.impact-icon-health i.fas {
+    --fa-secondary-color: rgba(255, 255, 255, 0.6); /* Slightly transparent white secondary for primary effect */
+    --fa-primary-color: #f7e7ff; /* Lighter shade of pink/purple for main icon part */
+    /* A trick to use `color` for primary and `--fa-secondary-color` for secondary layer */
+    color: #fff; /* Primary is pure white, secondary uses the gradient color */
+}
+
+/* For healthcare, let's make the heart white and the heartbeat line blue */
+.impact-icon-health i.fa-heartbeat {
+    --fa-primary-color: #fff; /* White heart */
+    --fa-secondary-color: #00c6ff; /* Blue heartbeat line */
+}
+/* Education Icon */
+.impact-icon-education {
+    background: linear-gradient(135deg, #7af2a5, #00b894); /* Green gradient background */
+}
+.impact-icon-education i.fas {
+    --fa-secondary-color: rgba(255, 255, 255, 0.6);
+    --fa-primary-color: #f0fff0; /* Light green/white */
+    color: #fff;
+}
+/* For education, primary is white, secondary is green */
+.impact-icon-education i.fa-books {
+    --fa-primary-color: #fff;
+    --fa-secondary-color: #7af2a5;
+}
+
+/* Food Icon */
+.impact-icon-food {
+    background: linear-gradient(135deg, #ffd700, #ff8c00); /* Orange/Gold gradient background */
+}
+.impact-icon-food i.fad {
+    --fa-secondary-color: rgba(255, 255, 255, 0.6);
+    --fa-primary-color: #fffaf0; /* Light yellow/white */
+    color: #fff;
+}
+/* For food, primary is white, secondary is orange/gold */
+.impact-icon-food i.fa-shopping-basket {
+    --fa-primary-color: #fff;
+    --fa-secondary-color: #ffd700;
+}
+
+
+/* Override the default Font Awesome duotone secondary color with Bootstrap classes */
+#impact-areas .text-info { --fa-secondary-color: var(--info); }
+#impact-areas .text-success { --fa-secondary-color: var(--success); }
+#impact-areas .text-warning { --fa-secondary-color: var(--warning); }
+
+
+
+/* Specific gradient for the 'Learn More' button (optional) */
+#impact-areas .btn-primary {
+     background: linear-gradient(45deg, #3a1c71, #d76d77); /* Using primary theme gradient */
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#impact-areas .btn-primary:hover {
+    background: linear-gradient(45deg, #d76d77, #3a1c71); /* Reverse gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-donate {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 15px rgba(255, 65, 108, 0.3);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-donate:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 20px rgba(255, 65, 108, 0.4);
+}
+
+.btn-donate::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-20deg);
+  transition: all 0.4s ease;
+}
+
+.btn-donate:hover::before {
+  left: 100%;
+}
+
+.pulse-wrapper {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-button {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 65, 108, 0.4);
+  }
+  70% {
+ 
+    box-shadow: 0 0 0 8px rgba(255, 65, 108, 0.15);
+  }
+  100% {
+    
+    box-shadow: 0 0 0 0 rgba(255, 65, 108, 0);
+  }
+}
+.pulse {
+  position: relative;
+  animation: pulse-button 2s infinite;
+}
+
+#products {
+  background: #f9f9f9;
+  padding: 60px 0;
+  border-radius: 30px;
+}
+
+.product-card {
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-img-wrapper {
+  height: 350px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.product-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-title {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #666;
+  min-height: 50px;
+}
+
+.rating-stars i {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .product-img-wrapper {
+    height: 220px;
+  }
+}
+.bg-mobile {
+  background: linear-gradient(135deg, #fff1e6, #ffe9f0);
+}
+
+.bg-watch {
+  background: linear-gradient(135deg, #fffbe6, #fdf2d1);
+}
+
+.bg-clothing {
+  background: linear-gradient(135deg, #e6fff7, #d2f4e9);
+}
+
+.bg-shoes {
+  background: linear-gradient(135deg, #e6f7ff, #d1ebfd);
+}
+
+.bg-home {
+  background: linear-gradient(135deg, #fffde6, #fef9d1);
+}
+
+.bg-music {
+  background: linear-gradient(135deg, #f3e6ff, #ead8ff);
+}
+

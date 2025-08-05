@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One-for-One Charity E-Commerce</title>
+  <link rel="stylesheet" href="power.css">
+
+
+  <!-- Fonts and Libraries -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="https://cdn-icons-png.flaticon.com/512/3448/3448610.png" alt="Logo" width="40" height="40" class="d-inline-block align-top mr-2">One-for-One</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-section="hero" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-section="products" href="#">Products</a>
+      </li>
+	  <li class="nav-item">
+	    <a class="nav-link" data-section="impact-areas" href="#">Our Impact</a>
+	</li>
+      <li class="nav-item">
+        <a class="nav-link" data-section="customer-stories" href="#">Customer Stories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-section="customer-reviews" href="#">Customer Reviews</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-section="contact-us" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+ <div class="svg-background">
+  <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="gradientWave" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffaf7b" />
+        <stop offset="50%" stop-color="#d76d77" />
+        <stop offset="100%" stop-color="#3a1c71" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#gradientWave)" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,128C480,139,600,181,720,202.7C840,224,960,224,1080,218.7C1200,213,1320,203,1380,197.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+</div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero text-black position-relative overflow-hidden">
+
+  <!-- Content -->
+  <div class="container text-center animate">
+    <h1 class="display-4 font-weight-bold">Buy One, Give One</h1>
+    <p class="lead">Your purchase can change a life. 🌍❤️</p>
+
+    <!-- Live impact -->
+    <p class="font-weight-bold mt-3">❤️ <span id="impact-count">547</span> lives impacted so far</p>
+    <div class="donation-tracker my-3">
+      <div class="donation-tracker-filled" style="width: 55%;"></div>
+    </div>
+
+    <!-- Testimonial quote -->
+    <blockquote class="blockquote text-dark my-4">
+      <p class="mb-0">“A small act of kindness is never wasted.”</p>
+      <footer class="blockquote-footer text-dark">– Aesop</footer>
+    </blockquote>
+
+    <!-- Action Buttons -->
+    
+      <button class="btn btn-lg btn-warning btn-donate pulse mr-3" data-toggle="modal" data-target="#donateModal">
+        <i class="fas fa-heart mr-2"></i>Donate Now
+      </button>
+	
+	  <div class="mt-4">
+      <button class="btn btn-lg btn-outline-dark btn-explore" onclick="scrollToProducts()">
+        <i class="fas fa-store mr-2"></i>Explore Products
+      </button>
+    </div>
+
+    <!-- Category Icons (optional) -->
+    <div class="d-flex justify-content-center flex-wrap mt-5">
+      <span class="badge badge-light text-dark m-2 p-3"><i class="fas fa-mobile-alt mr-2"></i>Mobiles</span>
+      <span class="badge badge-light text-dark m-2 p-3"><i class="fas fa-tshirt mr-2"></i>Clothing</span>
+      <span class="badge badge-light text-dark m-2 p-3"><i class="fas fa-shoe-prints mr-2"></i>Shoes</span>
+      <span class="badge badge-light text-dark m-2 p-3"><i class="fas fa-guitar mr-2"></i>Music</span>
+      <span class="badge badge-light text-dark m-2 p-3"><i class="fas fa-couch mr-2"></i>Home</span>
+    </div>
+  </div>
+</section>
+<!--🔽 Our Mission Section 🔽--> 
+<section id="mission" class="mission-section py-5 text-center text-white">
+  <div class="container animate__animated animate__fadeIn">
+    <h2 class="mb-4 font-weight-bold display-5">🤝 Our Mission</h2>
+    <p class="lead mx-auto w-75">
+      We believe commerce can be a force for good. For every product you purchase, we provide a similar item to a person in need — because every life deserves dignity.
+    </p>
+  </div>
+</section>
+<!-- 🔽 How it works new section 🔽 -->
+<section id="how-it-works" class="how-it-works-section container my-5 text-center">
+ <!-- Wave at the top -->
+  <div class="wave-top">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,0 C480,80 960,-40 1440,40 L1440,0 L0,0 Z" fill="#fff" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <h2 class="mb-4 display-4 font-weight-bold">How It Works</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4 animate__animated animate__fadeInDown animate__delay-1s">
+	  <div class="p-4 rounded shadow" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(6px); border-radius: 20px;">
+		<div class="icon-wrapper icon-shop mb-3 mx-auto">
+      <i class="fas fa-shopping-cart fa-2x text-white"></i>
+	  </div>
+      <h5 class="font-weight-bold">1. You Shop</h5>
+      <p class="text-dark">Select from our curated collection of products.</p>
+    </div>
+	</div>
+    <div class="col-md-4 mb-4 animate__animated animate__fadeInDown animate__delay-2s">
+	  <div class="p-4 rounded shadow" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(6px); border-radius: 20px;">
+        <div class="icon-wrapper icon-donate mb-3 mx-auto">
+          <i class="fas fa-hand-holding-heart fa-2x text-white"></i>
+	  </div>
+      <h5 class="font-weight-bold">2. We Donate</h5>
+      <p class="text-dark">For every purchase, we donate an item to someone in need.</p>
+    </div>
+	</div>
+    <div class="col-md-4 mb-4 animate__animated animate__fadeInDown animate__delay-3s">
+  <div class="p-4 rounded shadow" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(6px); border-radius: 20px;">
+    <div class="icon-wrapper icon-impact mb-3 mx-auto">
+      <i class="fas fa-smile-beam fa-2x text-white"></i>
+    </div>
+    <h5 class="font-weight-bold">3. Impact Lives</h5>
+    <p class="text-dark">Your purchase helps transform lives across the globe.</p>
+  </div>
+</div>
+ </div>
+ <!--🔽 Where our Impact goes section 🔽 -->
+<section id="impact-areas" class="container my-5 text-center">
+    <h2 class="mb-5 display-4 font-weight-bold text-dark animate__animated animate__fadeIn">Where Your Impact Goes</h2>
+    <p class="lead mb-5 mx-auto w-75 animate__animated animate__fadeInUp">
+        Every purchase helps us extend our reach. Your support directly contributes to initiatives providing essential resources to communities in need around the globe.
+    </p>
+    <div class="row">
+        <div class="col-md-4 mb-4 animate__animated animate__zoomIn animate__delay-1s">
+            <div class="card h-100 p-4 shadow bg-info text-white">
+                <div class="card-body">
+                    <i class="fas fa-heartbeat fa-4x mb-3 impact-icon impact-icon-health"></i>
+                    <h4 class="card-title font-weight-bold">Healthcare & Wellness</h4>
+                    <p class="card-text">Providing medical supplies, health education, and access to clinics in underserved areas.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 animate__animated animate__zoomIn animate__delay-2s">
+            <div class="card h-100 p-4 shadow bg-success text-white">
+                <div class="card-body">
+                    <i class="fas fa-book-open fa-4x mb-3 impact-icon impact-icon-education"></i>
+                    <h4 class="card-title font-weight-bold">Education & Empowerment</h4>
+                    <p class="card-text">Supporting schools, vocational training, and literacy programs for all ages.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 animate__animated animate__zoomIn animate__delay-3s">
+            <div class="card h-100 p-4 shadow bg-warning text-dark">
+                <div class="card-body">
+                    <i class="fas fa-shopping-basket fa-4x mb-3 impact-icon impact-icon-food"></i>
+                    <h4 class="card-title font-weight-bold">Food & Basic Needs</h4>
+                    <p class="card-text">Delivering nutritious meals, clean water, and shelter to those facing hardship.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5">
+        <a href="#" class="btn btn-lg btn-primary animate__animated animate__pulse animate__infinite">
+            <i class="fas fa-handshake mr-2"></i> Learn More About Our Impact
+        </a>
+    </div>
+</section>
+---
+ 
+
+ <!-- Wave at the bottom -->
+  <div class="wave-bottom">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C480,70 960,-40 1440,50 L1440,60 L0,60 Z" fill="#fff" opacity="0.5"/>
+    </svg>
+  </div>
+</section>
+
+
+  <!-- Product Section -->
+  <section id="products" class="container my-5">
+    <h2 class="text-center mb-4 display-4 font-weight-bold text-dark">🌟 Featured Products</h2>
+    <div class="row" id="productList">
+      <!-- Hardcoded Products -->
+	  <!--🔽 Our 1st Product🔽 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+  <div class="card product-card shadow-sm border-0 position-relative bg-mobile">
+    <span class="badge badge-danger position-absolute" style="top: 12px; right: 12px;">New</span>
+
+    <!-- Image wrapper -->
+    <div class="product-img-wrapper">
+      <img src="/images/xiaomi.jpg" alt="Xiaomi 15 Ultra" class="product-image img-fluid">
+    </div>
+
+    <!-- Info -->
+    <div class="card-body text-center">
+      <h5 class="product-title font-weight-bold mb-2">Xiaomi 15 Ultra (16GB, 512GB)</h5>
+      <p class="product-desc text-muted mb-2">Flagship phone with Leica optics, Snapdragon 8 Gen 4 and 200MP camera system.</p>
+
+      <!-- Rating -->
+      <div class="mb-2 rating-stars">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star-half-alt text-warning"></i>
+      </div>
+
+      <h5 class="text-success font-weight-bold mb-3">₹1,09,998</h5>
+      <button class="btn btn-outline-primary btn-sm px-4 rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<!--🔽 Our 2nd Product🔽 -->
+
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+  <div class="card product-card shadow-sm border-0 position-relative bg-shoes">
+    <span class="badge badge-danger position-absolute" style="top: 12px; right: 12px;">New</span>
+
+    <!-- Image wrapper -->
+    <div class="product-img-wrapper">
+      <img src="/images/nike.jpg" class="product-image img-fluid">
+    </div>
+
+    <!-- Info -->
+    <div class="card-body text-center">
+      <h5 class="product-title font-weight-bold mb-2">Nike Air Jordan 1 Retro Sneaker</h5>
+      <p class="product-desc text-muted mb-2">A premium and high quality Sneaker,perfect for streetwear and sneaker enthusiasts.</p>
+
+      <!-- Rating -->
+      <div class="mb-2 rating-stars">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star-half-alt text-warning"></i>
+      </div>
+
+      <h5 class="text-success font-weight-bold mb-3">₹8,995</h5>
+      <button class="btn btn-outline-primary btn-sm px-4 rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+<!--🔽 Our 3rd Product🔽 -->
+
+     <div class="col-12 col-sm-6 col-md-4 mb-4">
+  <div class="card product-card shadow-sm border-0 position-relative bg-watch">
+    <span class="badge badge-danger position-absolute" style="top: 12px; right: 12px;">New</span>
+
+    <!-- Image wrapper -->
+    <div class="product-img-wrapper">
+      <img src="/images/rolex.jpg" class="product-image img-fluid">
+    </div>
+
+    <!-- Info -->
+    <div class="card-body text-center">
+      <h5 class="product-title font-weight-bold mb-2">Rolex Cosmograph Daytona Watch</h5>
+      <p class="product-desc text-muted mb-2">Oyster,40mm,18ct yellow gold,Reference Id-126508</p>
+
+      <!-- Rating -->
+      <div class="mb-2 rating-stars">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star-half-alt text-warning"></i>
+      </div>
+
+      <h5 class="text-success font-weight-bold mb-3">₹4,43,500</h5>
+      <button class="btn btn-outline-primary btn-sm px-4 rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<!--🔽 Our 4th Product🔽 -->
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+  <div class="card product-card shadow-sm border-0 position-relative bg-clothing">
+    <span class="badge badge-danger position-absolute" style="top: 12px; right: 12px;">New</span>
+
+    <!-- Image wrapper -->
+    <div class="product-img-wrapper">
+      <img src="images/tshirt.jpg" class="product-image img-fluid">
+    </div>
+
+    <!-- Info -->
+    <div class="card-body text-center">
+      <h5 class="product-title font-weight-bold mb-2">Organic Cotton T-Shirt for men</h5>
+      <p class="product-desc text-muted mb-2">Textured and stylish casual outfit with premium fabric for mens with button-down design.</p>
+
+      <!-- Rating -->
+      <div class="mb-2 rating-stars">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star-half-alt text-warning"></i>
+      </div>
+
+      <h5 class="text-success font-weight-bold mb-3">₹4,43,500</h5>
+      <button class="btn btn-outline-primary btn-sm px-4 rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+	  
+	  <!--🔽 Our 5th Product🔽 -->
+	  <div class="col-12 col-sm-6 col-md-4 mb-4">
+  <div class="card product-card shadow-sm border-0 position-relative bg-music">
+    <span class="badge badge-danger position-absolute" style="top: 12px; right: 12px;">New</span>
+
+    <!-- Image wrapper -->
+    <div class="product-img-wrapper">
+      <img src="/images/guitar.jpg" class="product-image img-fluid">
+    </div>
+
+    <!-- Info -->
+    <div class="card-body text-center">
+      <h5 class="product-title font-weight-bold mb-2">NEWEN 6 String Electric Guitar</h5>
+      <p class="product-desc text-muted mb-2">Newen Electric Telecaster guitar made in Argentina,Single coil H-S-S pickup.</p>
+
+      <!-- Rating -->
+      <div class="mb-2 rating-stars">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star-half-alt text-warning"></i>
+      </div>
+
+      <h5 class="text-success font-weight-bold mb-3">₹4,43,500</h5>
+      <button class="btn btn-outline-primary btn-sm px-4 rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+      
+	  <!--🔽 Our 6th Product🔽 -->
+     <div class="col-12 col-sm-6 col-md-4 mb-4">
+  <div class="card product-card shadow-sm border-0 position-relative bg-home">
+    <span class="badge badge-danger position-absolute" style="top: 12px; right: 12px;">New</span>
+
+    <!-- Image wrapper -->
+    <div class="product-img-wrapper">
+      <img src="/images/template.jpg" class="product-image img-fluid">
+    </div>
+
+    <!-- Info -->
+    <div class="card-body text-center">
+      <h5 class="product-title font-weight-bold mb-2">Home temple with LED light and premium wooden design</h5>
+      <p class="product-desc text-muted mb-2">Pooja Mandir with cabinet and integrated LED lights(48X24X16 inch),perfect for home and office.</p>
+
+      <!-- Rating -->
+      <div class="mb-2 rating-stars">
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star text-warning"></i>
+        <i class="fas fa-star-half-alt text-warning"></i>
+      </div>
+
+      <h5 class="text-success font-weight-bold mb-3">₹4,43,500</h5>
+      <button class="btn btn-outline-primary btn-sm px-4 rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- Customer Stories -->
+  <section id="customer-stories" class="container my-5">
+    <h2 class="text-center mb-5 font-weight-bold"> Inspiring Customer Stories</h2>
+    <div class="row" id="storyList"></div>
+  </section>
+  
+<!-- Customer Reviews Section -->
+<section id="customer-reviews" class="container my-5">
+  <h2 class="text-center mb-5 font-weight-bold">Customer Reviews & Ratings</h2>
+  <div class="row" id="reviewList"></div>
+</section>
+
+  <!-- Donation Modal -->
+  <div class="modal fade" id="donateModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Donate Now</h5>
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <input type="number" id="donationAmount" class="form-control" placeholder="Enter donation amount(Ex:100₹)">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" onclick="donate()">Donate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact Us Section -->
+<section id="contact-us" class="container my-5">
+  <div class="bg-light border rounded p-5 shadow text-center">
+    <h2 class="mb-4">Contact Us</h2>
+    <p><i class="fas fa-phone-alt mr-2"></i><strong>+91 8918266434</strong></p>
+    <p><i class="fas fa-envelope mr-2"></i><strong>support@oneforone.org</strong></p>
+    <p>
+      <a href="https://wa.me/9593564620" target="_blank" class="text-success">
+        <i class="fab fa-whatsapp mr-2"></i><strong>Message us on WhatsApp</strong>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- Thank you message! -->
+<div id="thankYouMessage" style="display: none; position: fixed; bottom: 30px; right: 30px; background-color: #28a745; color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3); z-index: 9999;">
+  ✅ Thank you for donating to us! Have a nice day!
+</div>
+
+  <!-- Footer Section -->
+<footer id="footer" class="bg-dark text-white text-center py-4">
+  <p class="mb-2">Follow us on our social media pages</p>
+  <div>
+    <a href="https://www.facebook.com" target="_blank">
+      <i class="fab fa-facebook footer-icon"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <i class="fab fa-instagram footer-icon"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+      <i class="fab fa-twitter footer-icon"></i>
+    </a>
+  </div>
+  <hr class="bg-light mx-auto" style="width: 60%;" />
+
+  <div class="contact-info mt-3">
+    <p><i class="fas fa-phone-alt mr-2"></i>+91 8918266434</p>
+    <p><i class="fas fa-envelope mr-2"></i>support@oneforone.org</p>
+    <p>
+      <a href="https://wa.me/9593564620" target="_blank" class="text-success">
+        <i class="fab fa-whatsapp mr-2"></i>Message us on WhatsApp
+      </a>
+    </p>
+  </div>
+</footer>
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content bg-danger text-white">
+      <div class="modal-body text-center">
+        <i class="fas fa-times-circle fa-2x mb-2"></i>
+        <p id="errorText">Enter a valid amount</p>
+        <button type="button" class="btn btn-light btn-sm mt-2" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Bootstrap & jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load your custom script LAST -->
+<script src="modern.js"></script>
+</body>
+</html>
